@@ -18,7 +18,9 @@ dockermon
 
 Скопировать репозиторий `dockermon` на докер-хост, перейти в директорию `dockermon` и запустить `compose up`:
 
-    git clone https://github.com/philyuchkoff/dockermon && cd dockermon && ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
+    git clone https://github.com/philyuchkoff/dockermon
+    cd dockermon
+    ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
 
 ### Контейнеры:
 
@@ -60,3 +62,6 @@ Url: http://prometheus:9090
 Доступ: proxy
 
 Теперь вы можете импортировать шаблоны панели управления из директории Grafana. Из меню Grafana выберите «Панель управления» и нажмите «Импорт».
+
+
+https://habr.com/ru/company/southbridge/blog/314212/
