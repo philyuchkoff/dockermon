@@ -65,3 +65,5 @@ Url: http://prometheus:9090
 
 
 https://habr.com/ru/company/southbridge/blog/314212/
+
+https://github.com/stefanprodan/dockprom
