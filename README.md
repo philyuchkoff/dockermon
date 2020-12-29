@@ -33,7 +33,7 @@ dockermon
 
 ### Настройка Grafana
 
-Перейдите на http://<host-ip>:3000 и авторизуйтесь c логином `admin` и паролем `changeme`. Пароль на свой можно изменить с помощью Grafana UI или изменив файл user.config
+Перейдите на http://<host-ip>:3000 и авторизуйтесь c логином `admin` и паролем `changeme`. Пароль на свой можно изменить с помощью Grafana UI или изменив файл config
   
 ```
 grafana:
@@ -42,7 +42,7 @@ grafana:
     - config
 
 ```
-user.config должен выглядеть примерно так:
+config должен выглядеть примерно так:
 ```
 GF_SECURITY_ADMIN_USER=admin
 GF_SECURITY_ADMIN_PASSWORD=changeme-заменить-на-нужный
