@@ -9,7 +9,7 @@ dockermon
 
 ***вставить картинку-схему связей компонентов***
 
-# Установка
+## Установка
 
 ### Требования:
 
@@ -31,36 +31,42 @@ dockermon
 * cAdvisor (сборщик метрик контейнеров).
 * Caddy (reverse proxy and basic auth provider for prometheus and alertmanager)
 
-### Настройка Grafana
+## Настройка Grafana
 
-Перейдите на http://<host-ip>:3000 и авторизуйтесь c логином `admin` и паролем `changeme`. Пароль на свой можно изменить с помощью Grafana UI или изменив файл config
+Перейдите на http://<host-ip>:3000 и авторизуйтесь c логином `admin` и паролем `changeme`. Пароль на свой можно изменить с помощью Grafana UI или изменив файл `config`:
   
 ```
 grafana:
   image: grafana/grafana:7.2.0
   env_file:
     - config
+```
 
-```
-config должен выглядеть примерно так:
-```
-GF_SECURITY_ADMIN_USER=admin
-GF_SECURITY_ADMIN_PASSWORD=changeme-заменить-на-нужный
-GF_USERS_ALLOW_SIGN_UP=false
-```
-If you want to change the password, you have to remove this entry, otherwise the change will not take effect
+Если вы решите поменять пароль, то нужно удалить вот эту строку:
 ```
 - grafana_data:/var/lib/grafana
 ```
+если ее не удалить - изменения не применятся, пароль не поменяется.
 
-Из меню Grafana выберите пункт «Источники данных» (Data Sources) и кликните «Добавить источник данных» (Add Data Source). Чтобы добавить контейнеры Prometheus как источник данных, используйте следующие значения:
+Gafana поддерживает аутентификацию, а Prometheus и AlertManager нет. Если нужно - удалите отображение портов Prometheus и AlertManager из docker-compose и используйте NGINX как реверс-прокси.
+
+В Grafana предварительно уже настроены дашборды и в качестве default data source указан Prometheus. Из меню Grafana выберите Data Sources - Add Data Source и укажите контейнеры Prometheus как источник данных:
+
+- Name: Prometheus
+- Type: Prometheus
+- Url: http://prometheus:9090
+- Access: proxy
+
+### Docker Host Dashboard
+
+### Docker Containers Dashboard
+
+### Monitor Services Dashboard
 
 
-Имя: Prometheus
-Тип: Prometheus
-Url: http://prometheus:9090
-Доступ: proxy
 
+
+qqqqqqqqqqqqqqqqqqqqqq
 Теперь вы можете импортировать шаблоны панели управления из директории Grafana. Из меню Grafana выберите «Панель управления» и нажмите «Импорт».
 
 
