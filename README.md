@@ -5,7 +5,7 @@ dockermon
 
 :exclamation: Это же решение с Docker Swarm: [stefanprodan/swarmprom](https://github.com/stefanprodan/swarmprom)
 
-:exclamation: Интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
+:+1: Интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
 
 ***вставить картинку-схему связей компонентов***
 
