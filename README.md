@@ -54,7 +54,7 @@ Gafana поддерживает аутентификацию, а Prometheus и A
 
 - Name: Prometheus
 - Type: Prometheus
-- Url: http://prometheus:9090
+- Url: `http://prometheus:9090`
 - Access: proxy
 
 ### Docker Host Dashboard
