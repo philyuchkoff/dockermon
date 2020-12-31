@@ -24,9 +24,9 @@ dockermon
 
 ### Контейнеры:
 
-* Prometheus http://<host-ip>:9090
-* AlertManager http://<host-ip>:9093
-* Grafana http://<host-ip>:3000
+* Prometheus `http://<host-ip>:9090`
+* AlertManager `http://<host-ip>:9093`
+* Grafana `http://<host-ip>:3000`
 * NodeExporter (сборщик метрик хостов);
 * cAdvisor (сборщик метрик контейнеров).
 * Caddy (reverse proxy and basic auth provider for prometheus and alertmanager)
