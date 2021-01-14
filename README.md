@@ -63,7 +63,9 @@ Gafana поддерживает аутентификацию, а Prometheus и A
 
 ### Monitor Services Dashboard
 
+## Масштабирование
 
+Для контроля большего количества хостов нужно запустить ***node-exporter*** и контейнер ***cAdvisor*** на каждом новом хосте и указать эти хосты в конфиге Prometheus для скрапинга.
 
 
 qqqqqqqqqqqqqqqqqqqqqq
@@ -73,3 +75,5 @@ qqqqqqqqqqqqqqqqqqqqqq
 https://habr.com/ru/company/southbridge/blog/314212/
 
 https://github.com/stefanprodan/dockprom
+
+https://stefanprodan.com/2016/a-monitoring-solution-for-docker-hosts-containers-and-containerized-services/
