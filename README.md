@@ -52,7 +52,6 @@ GF_SECURITY_ADMIN_PASSWORD=password
 GF_USERS_ALLOW_SIGN_UP=false
 ```
 
-
 Если вы решите поменять пароль, то нужно удалить вот эту строку:
 ```
 - grafana_data:/var/lib/grafana
@@ -66,7 +65,7 @@ Gafana поддерживает аутентификацию, а Prometheus и A
 - Name: Prometheus
 - Type: Prometheus
 - Url: `http://prometheus:9090`
-- Access: proxy
+- Access: Server (default)
 
 ### Docker Host Dashboard
 
