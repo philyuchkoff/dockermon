@@ -71,7 +71,7 @@ Gafana поддерживает аутентификацию, а Prometheus и A
 
 ![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockerhost.jpg)
 
-В этом дашбоарде для графика `Free Storage` необходимо будет поправить тип файловой системы, заменив мою `ext4` на ту, которую используете вы. Меняется в `grafana/provisioning/dashboards/docker_host.json` в строке 480:
+В этом дашбоарде для графика `Free Storage` необходимо будет поправить тип файловой системы, заменив мою `ext4` на ту, которую используете вы. Меняется в `grafana/provisioning/dashboards/docker_host.json` в строке 521:
 ````
 "expr": "сумма (node_filesystem_free_bytes {fstype = \" ext4 \ "})",
 ````
