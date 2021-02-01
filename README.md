@@ -22,7 +22,7 @@ dockermon
     cd dockermon
     ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
 
-### Контейнеры:
+### Будут запущены контейнеры:
 
 * Prometheus `http://<host-ip>:9090`
 * AlertManager `http://<host-ip>:9093`
@@ -35,7 +35,9 @@ dockermon
 
 Перейдите на http://<host-ip>:3000 и авторизуйтесь c логином `admin` и паролем `admin`. После первого входа будет предложено изменить пароль на новый. 
 Учетные данные можно изменить в `docker-compose.yml` или указав переменные среды `ADMIN_USER` и `ADMIN_PASSWORD` при запуске, примерно так:
+
 `ADMIN_USER=user ADMIN_PASSWORD=password docker-compose up -d`
+
 Или учетные данные можно добавить непосредственно в конфиг Grafana:  
 ```
 grafana:
