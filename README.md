@@ -69,6 +69,8 @@ Gafana поддерживает аутентификацию, а Prometheus и A
 
 ### Docker Host Dashboard
 
+![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockerhost.jpg)
+
 ### Docker Containers Dashboard
 
 ### Monitor Services Dashboard
