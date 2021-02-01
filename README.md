@@ -33,14 +33,23 @@ dockermon
 
 ## Настройка Grafana
 
-Перейдите на http://<host-ip>:3000 и авторизуйтесь c логином `admin` и паролем `admin`. После первого входа будет предложено изменить итот пароль на новый. Пароль на свой можно изменить с помощью Grafana UI или изменив файл `config`:
-  
+Перейдите на http://<host-ip>:3000 и авторизуйтесь c логином `admin` и паролем `admin`. После первого входа будет предложено изменить пароль на новый. 
+Учетные данные можно изменить в `docker-compose.yml` или указав переменные среды `ADMIN_USER` и `ADMIN_PASSWORD` при запуске, примерно так:
+`ADMIN_USER=user ADMIN_PASSWORD=password docker-compose up -d`
+Или учетные данные можно добавить непосредственно в конфиг Grafana:  
 ```
 grafana:
   image: grafana/grafana:7.2.0
   env_file:
     - config
 ```
+и в этом случае у файла `config` должен быть вот такой формат:
+```
+GF_SECURITY_ADMIN_USER=user
+GF_SECURITY_ADMIN_PASSWORD=password
+GF_USERS_ALLOW_SIGN_UP=false
+```
+
 
 Если вы решите поменять пароль, то нужно удалить вот эту строку:
 ```
