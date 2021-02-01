@@ -77,9 +77,9 @@ Gafana поддерживает аутентификацию, а Prometheus и A
 ````
 Правильное значение для своей системы можно посмотреть, сделав запрос `node_filesystem_free_bytes` в Prometheus.
 
-   
-
 ### Docker Containers Dashboard
+
+![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockerhost.jpg)
 
 ### Monitor Services Dashboard
 
