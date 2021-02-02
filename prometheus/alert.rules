@@ -50,8 +50,6 @@ groups:
       summary: Container killed (instance {{ $labels.instance }})
       description: A container has disappeared\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}
 
-  # cAdvisor can sometimes consume a lot of CPU, so this alert will fire constantly.
-  # If you want to exclude it from this alert, exclude the serie having an empty name: container_cpu_usage_seconds_total{name!=""}
   - alert: ContainerCpuUsage
     expr: (sum(rate(container_cpu_usage_seconds_total[3m])) BY (instance, name) * 100) > 80
     for: 2m
@@ -96,6 +94,3 @@ groups:
     annotations:
       summary: Container high throttle rate (instance {{ $labels.instance }})
       description: Container is being throttled\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}
-
-
-
