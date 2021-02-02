@@ -140,7 +140,7 @@ groups:
       severity: warning
     annotations:
       summary: "Prometheus too many restarts (instance {{ $labels.instance }})"
-      description: "Prometheus перезапущен больше двузх раз за последние 15 минут.\n Prometheus has restarted more than twice in the last 15 minutes. It might be crashlooping.\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
+      description: "Prometheus has restarted more than twice in the last 15 minutes. It might be crashlooping.\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
 
   - alert: PrometheusAlertmanagerConfigurationReloadFailure
     expr: alertmanager_config_last_reload_successful != 1
