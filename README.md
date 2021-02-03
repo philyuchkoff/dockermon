@@ -7,7 +7,6 @@ dockermon
 
 :exclamation: Это же решение с Docker Swarm: [stefanprodan/swarmprom](https://github.com/stefanprodan/swarmprom)
 
-:+1: Интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
 
 ### Общая схема
 ![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockermon.png)
@@ -115,3 +114,6 @@ AlertManager отвечает за обработку алармов, котор
 Для высокодоступности и отказоустойчивости Prometheus просто поставьте два идентичных Prometheus c одинаковым конфигурационным файлом (`prometheus.yml`) на двух серверах, чтобы они собирали одни и те же метрики. При этом сервер A будет дополнительно мониторить сервер B и наоборот.
 
 Alertmanager может работать в кластерной конфигурации, умеет дедуплицировать данные с разных серверов Prometheus и может связываться с другими копиями Alertmanager, чтобы не отправлять несколько одинаковых оповещений. Ставьте Alertmanager на каждый сервер Prometheus.
+
+## Планы
+:+1: добавить интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
