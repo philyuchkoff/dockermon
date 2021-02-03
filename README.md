@@ -3,6 +3,8 @@ dockermon
 
 Мониторинг Docker-хостов и контейнеров стеком из [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor), [NodeExporter](https://github.com/prometheus/node_exporter) и алертингом с [AlertManager](https://github.com/prometheus/alertmanager).
 
+За основу взята идея Stefan Prodan [dockprom](https://github.com/philyuchkoff/dockprom).
+
 :exclamation: Это же решение с Docker Swarm: [stefanprodan/swarmprom](https://github.com/stefanprodan/swarmprom)
 
 :+1: Интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
