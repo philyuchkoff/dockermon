@@ -9,7 +9,8 @@ dockermon
 
 :+1: Интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
 
-***вставить картинку-схему связей компонентов***
+### Общая схема
+![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockermon.png)
 
 ## Установка
 
