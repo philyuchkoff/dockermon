@@ -87,6 +87,18 @@ GF_USERS_ALLOW_SIGN_UP=false
 
 ### Node Exporter Dashboard
 
+## Alerts
+В файле [alert.rules](https://github.com/philyuchkoff/dockermon/blob/main/prometheus/alert.rules) определены алармы для групп:
+- Host (Docker Host)
+- Prometheus (сам Prometheus)
+- Containers (Docker Containers)
+- Targets
+
+Чтобы изменить правила (или добавить свои), нужно поправить правила в указанном файле и заставить Prometheus перечитать этот файл, выполнив HTTP POST запрос в Prometheus:
+
+    curl -X POST http://LOGIN:PASSWORD@<host-ip>:9090/-/reload
+
+
 ## Масштабирование
 
 Для контроля большего количества хостов нужно запустить ***node-exporter*** и контейнер ***cAdvisor*** на каждом новом хосте и указать эти хосты в конфиге Prometheus для скрапинга.
