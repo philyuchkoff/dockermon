@@ -60,7 +60,7 @@ GF_USERS_ALLOW_SIGN_UP=false
 ```
 если ее не удалить - изменения не применятся, пароль не поменяется.
 
-Gafana поддерживает аутентификацию, а Prometheus и AlertManager нет. Если нужно - удалите отображение портов Prometheus и AlertManager из docker-compose и используйте NGINX как реверс-прокси.
+:exclamation: Gafana поддерживает аутентификацию, а Prometheus и AlertManager нет, то есть, доступ к Prometheus и AlertManager открыт для всех. Если это не то, что нужно - удалите expose портов Prometheus и AlertManager из `docker-compose.yml` и используйте реверс-прокси (Nginx, например).
 
 В Grafana предварительно уже настроены дашборды и в качестве default data source указан Prometheus. Из меню Grafana выберите `Data Sources` - `Add Data Source` и укажите контейнеры Prometheus как источник данных:
 
