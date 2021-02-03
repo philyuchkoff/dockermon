@@ -35,7 +35,7 @@ dockermon
 
 ## Настройка Grafana
 
-Перейдите на http://<host-ip>:3000 и авторизуйтесь c логином `admin` и паролем `admin`. После первого входа будет предложено изменить пароль на новый. 
+Перейдите на `http://<host-ip>:3000` и авторизуйтесь c логином `admin` и паролем `admin`. После первого входа будет предложено изменить пароль на новый. 
 Учетные данные можно изменить в `docker-compose.yml` или указав переменные среды `ADMIN_USER` и `ADMIN_PASSWORD` при запуске, примерно так:
 
 `ADMIN_USER=user ADMIN_PASSWORD=password docker-compose up -d`
@@ -62,7 +62,7 @@ GF_USERS_ALLOW_SIGN_UP=false
 
 Gafana поддерживает аутентификацию, а Prometheus и AlertManager нет. Если нужно - удалите отображение портов Prometheus и AlertManager из docker-compose и используйте NGINX как реверс-прокси.
 
-В Grafana предварительно уже настроены дашборды и в качестве default data source указан Prometheus. Из меню Grafana выберите Data Sources - Add Data Source и укажите контейнеры Prometheus как источник данных:
+В Grafana предварительно уже настроены дашборды и в качестве default data source указан Prometheus. Из меню Grafana выберите `Data Sources` - `Add Data Source` и укажите контейнеры Prometheus как источник данных:
 
 - Name: Prometheus
 - Type: Prometheus
