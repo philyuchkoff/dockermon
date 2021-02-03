@@ -104,15 +104,14 @@ GF_USERS_ALLOW_SIGN_UP=false
 ### Настройка
 Веб-интерфейс AlertManager доступен по адресу `http://<host-ip>:9093`
 AlertManager отвечает за обработку алармов, которые отправляет Prometheus, и может отправлять их в разные системы, полный список которых можно посмотреть в [документации](https://prometheus.io/docs/alerting/latest/configuration/)
+Отправку нотификаций в мессенджеры, почту и т.п. можно настроить в файле [alertmanager/config.yml](https://github.com/philyuchkoff/dockermon/blob/main/alertmanager/config.yml)
 
 ## Масштабирование
 
 Если нужно подключить еще какие-то хосты, необходимо установить и запустить ***node-exporter*** и контейнер ***cAdvisor*** на каждом новом хосте и указать эти хосты в конфиге Prometheus.
 
+В Prometheus не стоит ставить retention period большим. Если нужно хранить метрики долго - ставьте [VictoriaMetrics](https://victoriametrics.com/) (или Cortex, Thanos, M3DB...) и храните метрики там. Мне нравится VictoriaMetric, обычной, single-node version, хватит с избытком, но, если вам не хватит - у нее есть cluster virsion.
 
+Для высокодоступности и отказоустойчивости Prometheus просто поставьте два идентичных Prometheus c одинаковым конфигурационным файлом (`prometheus.yml`) на двух серверах, чтобы они собирали одни и те же метрики. При этом сервер A будет дополнительно мониторить сервер B и наоборот.
 
-https://habr.com/ru/company/southbridge/blog/314212/
-
-https://github.com/stefanprodan/dockprom
-
-https://stefanprodan.com/2016/a-monitoring-solution-for-docker-hosts-containers-and-containerized-services/
+Alertmanager может работать в кластерной конфигурации, умеет дедуплицировать данные с разных серверов Prometheus и может связываться с другими копиями Alertmanager, чтобы не отправлять несколько одинаковых оповещений. Ставьте Alertmanager на каждый сервер Prometheus.
