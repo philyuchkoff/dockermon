@@ -110,7 +110,7 @@ AlertManager отвечает за обработку алармов, котор
 
 Если нужно подключить еще какие-то хосты, необходимо установить и запустить ***node-exporter*** и контейнер ***cAdvisor*** на каждом новом хосте и указать эти хосты в конфиге Prometheus.
 
-В Prometheus не стоит ставить retention period большим. Если нужно хранить метрики долго - ставьте [VictoriaMetrics](https://victoriametrics.com/) (или Cortex, Thanos, M3DB...) и храните метрики там. Мне нравится VictoriaMetric, обычной, single-node version, хватит с избытком, но, если вам не хватит - у нее есть cluster virsion.
+В Prometheus не стоит ставить retention period большим. Если нужно хранить метрики долго - ставьте [VictoriaMetrics](https://victoriametrics.com/) (или Cortex, Thanos, M3DB...) и храните метрики там. Мне нравится VictoriaMetrics, single-node version хватит с избытком, но, если вам не хватит - у нее есть cluster version.
 
 Для высокодоступности и отказоустойчивости Prometheus просто поставьте два идентичных Prometheus c одинаковым конфигурационным файлом (`prometheus.yml`) на двух серверах, чтобы они собирали одни и те же метрики. При этом сервер A будет дополнительно мониторить сервер B и наоборот.
 
