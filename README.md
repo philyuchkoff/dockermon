@@ -98,14 +98,14 @@ GF_USERS_ALLOW_SIGN_UP=false
 
     curl -X POST http://LOGIN:PASSWORD@<host-ip>:9090/-/reload
 
+### Настройка
+Веб-интерфейс AlertManager доступен по адресу `http://<host-ip>:9093`
+AlertManager отвечает за обработку алармов, которые отправляет Prometheus, и может отправлять их в разные системы, полный список которых можно посмотреть в [документации](https://prometheus.io/docs/alerting/latest/configuration/)
 
 ## Масштабирование
 
 Для контроля большего количества хостов нужно запустить ***node-exporter*** и контейнер ***cAdvisor*** на каждом новом хосте и указать эти хосты в конфиге Prometheus для скрапинга.
 
-
-qqqqqqqqqqqqqqqqqqqqqq
-Теперь вы можете импортировать шаблоны панели управления из директории Grafana. Из меню Grafana выберите «Панель управления» и нажмите «Импорт».
 
 
 https://habr.com/ru/company/southbridge/blog/314212/
