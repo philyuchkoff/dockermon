@@ -94,9 +94,11 @@ GF_USERS_ALLOW_SIGN_UP=false
 - Containers (Docker Containers)
 - Targets
 
-Чтобы изменить правила (или добавить свои), нужно поправить правила в указанном файле и заставить Prometheus перечитать этот файл, выполнив HTTP POST запрос в Prometheus:
+Чтобы изменить/удалить/добавить правила, нужно поправить правила в указанном файле и заставить Prometheus перечитать этот файл, выполнив HTTP POST запрос в Prometheus:
 
     curl -X POST http://LOGIN:PASSWORD@<host-ip>:9090/-/reload
+    
+Работает, только если Prometheus запущен с флагом `--web.enable-lifecycle`
 
 ### Настройка
 Веб-интерфейс AlertManager доступен по адресу `http://<host-ip>:9093`
