@@ -116,4 +116,9 @@ AlertManager отвечает за обработку алармов, котор
 Alertmanager может работать в кластерной конфигурации, умеет дедуплицировать данные с разных серверов Prometheus и может связываться с другими копиями Alertmanager, чтобы не отправлять несколько одинаковых оповещений. Ставьте Alertmanager на каждый сервер Prometheus.
 
 ## Планы
-:+1: добавить интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
+- :+1: добавить интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
+- нотификации от AlertManager в Telegram
+- добавить [бэкапилку Prometheus TSDB](https://github.com/philyuchkoff/prometheus-tsdb-dump) (она же импортер метрик из Prometheus в VictoriaMetrics)
+- добавить механизм бэкапа/восстановление Grafana, пока [скриптами](https://github.com/philyuchkoff/grafana-backup)
+- ...
+
