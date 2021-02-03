@@ -15,8 +15,8 @@ dockermon
 
 ### Требования:
 
-* Docker Engine >= 1.13
-* Docker Compose >= 1.11
+- Docker Engine >= 1.13
+- Docker Compose >= 1.11
 
 Скопировать репозиторий `dockermon` на докер-хост, перейти в директорию `dockermon` и запустить `compose up`:
 
@@ -24,14 +24,14 @@ dockermon
     cd dockermon
     ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
 
-### Будут запущены контейнеры:
+В результате будут запущены контейнеры:
 
-* Prometheus `http://<host-ip>:9090`
-* AlertManager `http://<host-ip>:9093`
-* Grafana `http://<host-ip>:3000`
-* NodeExporter (сборщик метрик хостов);
-* cAdvisor (сборщик метрик контейнеров).
-* Caddy (reverse proxy and basic auth provider for prometheus and alertmanager)
+- Prometheus `http://<host-ip>:9090`
+- AlertManager `http://<host-ip>:9093`
+- Grafana `http://<host-ip>:3000`
+- NodeExporter (сборщик метрик хостов);
+- cAdvisor (сборщик метрик контейнеров).
+- Caddy (reverse proxy and basic auth provider for prometheus and alertmanager)
 
 ## Настройка Grafana
 
@@ -60,7 +60,7 @@ GF_USERS_ALLOW_SIGN_UP=false
 ```
 если ее не удалить - изменения не применятся, пароль не поменяется.
 
-:exclamation: Gafana поддерживает аутентификацию, а Prometheus и AlertManager нет, то есть, доступ к Prometheus и AlertManager открыт для всех. Если это не то, что нужно - удалите expose портов Prometheus и AlertManager из `docker-compose.yml` и используйте реверс-прокси (Nginx, например).
+:exclamation: Gafana поддерживает аутентификацию, а Prometheus и AlertManager нет, то есть, доступ к Prometheus и AlertManager открыт для всех. Если это не то, что нужно - удалите expose портов Prometheus и AlertManager из `docker-compose.yml` и используйте реверс-прокси (Nginx или Caddy, например).
 
 В Grafana предварительно уже настроены дашборды и в качестве default data source указан Prometheus. Из меню Grafana выберите `Data Sources` - `Add Data Source` и укажите контейнеры Prometheus как источник данных:
 
