@@ -78,7 +78,7 @@ GF_USERS_ALLOW_SIGN_UP=false
 
 ### Docker Containers Dashboard
 
-![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockerhost.jpg)
+![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockercontainers.jpg)
 
 ### Monitor Services Dashboard
 
