@@ -40,7 +40,7 @@
 Или учетные данные можно добавить непосредственно в конфиг Grafana:  
 ```
 grafana:
-  image: grafana/grafana:7.2.0
+  image: grafana/grafana:7.4.0
   env_file:
     - config
 ```
