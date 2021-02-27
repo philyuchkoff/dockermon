@@ -40,7 +40,7 @@
 Или учетные данные можно добавить непосредственно в конфиг Grafana:  
 ```
 grafana:
-  image: grafana/grafana:7.4.0
+  image: grafana/grafana:7.4.3
   env_file:
     - config
 ```
@@ -112,8 +112,7 @@ AlertManager отвечает за обработку алармов, котор
 
 Alertmanager может работать в кластерной конфигурации, умеет дедуплицировать данные с разных серверов Prometheus и может связываться с другими копиями Alertmanager, чтобы не отправлять несколько одинаковых оповещений. Ставьте Alertmanager на каждый сервер Prometheus.
 
-# Что нового
-- 11.02.2021 Версия Grafana изменена на 7.4.0
+
 ## Планы
 - :+1: добавить интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
 - нотификации от AlertManager в Telegram
