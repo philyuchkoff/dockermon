@@ -1,4 +1,4 @@
-Система мониторинга Docker-хостов и контейнеров стеком из [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor), [NodeExporter](https://github.com/prometheus/node_exporter) и алертингом с [AlertManager](https://github.com/prometheus/alertmanager).
+Система мониторинга Docker-хостов и контейнеров стеком из [Prometheus](https://prometheus.io/) (2.25.2), [Grafana](http://grafana.org/) (7.4.5), [cAdvisor](https://github.com/google/cadvisor) (0.38.8), [NodeExporter](https://github.com/prometheus/node_exporter) (1.1.2) и алертингом с [AlertManager](https://github.com/prometheus/alertmanager) (0.21.0).
 
 За основу взята идея Stefan Prodan [dockprom](https://github.com/philyuchkoff/dockprom).
 
