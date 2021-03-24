@@ -68,7 +68,7 @@ GF_USERS_ALLOW_SIGN_UP=false
 
 ### Docker Host Dashboard
 
-![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockerhost.jpg)
+![Docker Host Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockerhost.jpg)
 
 В этом дашбоарде для графика `Free Storage` необходимо будет поправить тип файловой системы, заменив мою `ext4` на ту, которую используете вы. Меняется в `grafana/provisioning/dashboards/docker_host.json` в строке 521:
 ````
@@ -78,12 +78,14 @@ GF_USERS_ALLOW_SIGN_UP=false
 
 ### Docker Containers Dashboard
 
-![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockercontainers.jpg)
+![Docker Containers Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockercontainers.jpg)
 
 ### Monitor Services Dashboard
 later
+
 ### Node Exporter Dashboard
-later
+![Node Exporter Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/nodexporter.jpg)
+
 ## Alerts
 В файле [alert.rules](https://github.com/philyuchkoff/dockermon/blob/main/prometheus/alert.rules) определены алармы для групп:
 - Host (Docker Host)
