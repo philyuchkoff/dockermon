@@ -81,7 +81,7 @@ GF_USERS_ALLOW_SIGN_UP=false
 ![Docker Containers Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockercontainers.jpg)
 
 ### Monitor Services Dashboard
-later
+![Monitor Services Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/monitorservices.jpg)
 
 ### Node Exporter Dashboard
 ![Node Exporter Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/nodexporter.jpg)
