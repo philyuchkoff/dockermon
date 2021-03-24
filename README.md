@@ -114,6 +114,7 @@ Alertmanager может работать в кластерной конфигу�
 
 
 ## Планы
+- :+1: Заменить Prometheus на [VictoriaMetrics](https://victoriametrics.com/)
 - :+1: добавить интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
 - нотификации от AlertManager в Telegram
 - добавить [бэкапилку Prometheus TSDB](https://github.com/philyuchkoff/prometheus-tsdb-dump) (она же импортер метрик из Prometheus в VictoriaMetrics)
