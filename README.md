@@ -1,5 +1,8 @@
 Система мониторинга Docker-хостов и контейнеров стеком из [Prometheus](https://prometheus.io/) (2.25.2), [Grafana](http://grafana.org/) (7.4.5), [cAdvisor](https://github.com/google/cadvisor) (0.38.8, сборщик метрик из Docker), [NodeExporter](https://github.com/prometheus/node_exporter) (1.1.2), [Pushgateway](https://github.com/prometheus/pushgateway) (1.4.0) и алертингом с [AlertManager](https://github.com/prometheus/alertmanager) (0.21.0).
 
+![GitHub last commit](https://img.shields.io/github/last-commit/philyuchkoff/dockermon?style=for-the-badge)
+![GitHub All Releases](https://img.shields.io/github/downloads/philyuchkoff/dockermon/total?style=for-the-badge)
+
 За основу взята идея Stefan Prodan [dockprom](https://github.com/philyuchkoff/dockprom).
 
 :exclamation: Это же решение с Docker Swarm: [stefanprodan/swarmprom](https://github.com/stefanprodan/swarmprom)
