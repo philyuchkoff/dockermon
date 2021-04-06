@@ -22,7 +22,9 @@
 
     git clone https://github.com/philyuchkoff/dockermon
     cd dockermon
-    ADMIN_USER=admin ADMIN_PASSWORD=admin docker-compose up -d
+    ADMIN_USER=admin ADMIN_PASSWORD_HASH=JDJhJDE0JE91S1FrN0Z0VEsyWmhrQVpON1VzdHVLSDkyWHdsN0xNbEZYdnNIZm1pb2d1blg4Y09mL0ZP docker-compose up -d
+
+**Caddy v2 не принимает пароли в plain text. Пароль ДОЛЖЕН быть предоставлен как хеш-значение. Приведенный выше хэш пароля соответствует ADMIN_PASSWORD 'admin'. Чуть ниже есть инструкция, как сгенерировать себе хэш нового пароля (раздел "Обновление Caddy до v2")**
 
 В результате будут запущены контейнеры:
 
@@ -32,6 +34,12 @@
 - NodeExporter (сборщик метрик хостов);
 - cAdvisor (сборщик метрик контейнеров).
 - Caddy (reverse proxy and basic auth provider for prometheus and alertmanager)
+
+
+
+## Обновление Caddy до v2
+Выполните `docker run --rm caddy caddy hash-password --plaintext 'НОВЫЙ_ADMIN_PASSWORD'` чтобы сгенерировать хэш вашего нового пароля. 
+УБЕДИТЕСЬ, что вы заменили `ADMIN_PASSWORD` новым паролем в виде обычного текста, а `ADMIN_PASSWORD_HASH` - хешем в [docker-compose.yml](./docker-compose.yml) для контейнера caddy (в самом низу файла).
 
 ## Настройка Grafana
 
