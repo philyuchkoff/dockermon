@@ -21,7 +21,7 @@ services:
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:v0.39.0
-    container_name: cadvisor
+    container_name: cadvisorы
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:rw
