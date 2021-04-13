@@ -1,4 +1,4 @@
-Система мониторинга Docker-хостов и контейнеров стеком из [Prometheus](https://prometheus.io/) (2.25.2), [Grafana](http://grafana.org/) (7.4.5), [cAdvisor](https://github.com/google/cadvisor) (0.38.8, сборщик метрик из Docker), [NodeExporter](https://github.com/prometheus/node_exporter) (1.1.2), [Pushgateway](https://github.com/prometheus/pushgateway) (1.4.0) и алертингом с [AlertManager](https://github.com/prometheus/alertmanager) (0.21.0).
+Система мониторинга Docker-хостов и контейнеров стеком из [Prometheus](https://prometheus.io/) (2.25.2), [Grafana](http://grafana.org/) (7.5.3), [cAdvisor](https://github.com/google/cadvisor) (0.39.0, сборщик метрик из Docker), [NodeExporter](https://github.com/prometheus/node_exporter) (1.1.2), [Pushgateway](https://github.com/prometheus/pushgateway) (1.4.0) и алертингом с [AlertManager](https://github.com/prometheus/alertmanager) (0.21.0).
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/philyuchkoff/dockermon?style=for-the-badge)
 ![GitHub All Releases](https://img.shields.io/github/downloads/philyuchkoff/dockermon/total?style=for-the-badge)
@@ -51,7 +51,7 @@
 Или учетные данные можно добавить непосредственно в конфиг Grafana:  
 ```
 grafana:
-  image: grafana/grafana:7.4.5
+  image: grafana/grafana:7.5.3
   env_file:
     - config
 ```
