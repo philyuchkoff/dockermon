@@ -12,8 +12,6 @@
       reverse_proxy alertmanager:9093
 }
 
-}
-
 :9091 {
     basicauth /* {
         {$ADMIN_USER} {$ADMIN_PASSWORD_HASH}
