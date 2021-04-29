@@ -1,46 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "panel",
-      "id": "gauge",
-      "name": "Gauge",
-      "version": ""
-    },
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "7.3.7"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -58,8 +16,8 @@
   "editable": true,
   "gnetId": 1860,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1611871737628,
+  "id": 7,
+  "iteration": 1619702943139,
   "links": [],
   "panels": [
     {
@@ -86,7 +44,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [
             {
               "id": 0,
@@ -98,7 +55,6 @@
           ],
           "max": 100,
           "min": 0,
-          "nullValueMode": "null",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -138,9 +94,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "text": {}
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "expr": "(((count(count(node_cpu_seconds_total{instance=\"$node\",job=\"$job\"}) by (cpu))) - avg(sum by (mode)(irate(node_cpu_seconds_total{mode='idle',instance=\"$node\",job=\"$job\"}[5m])))) * 100) / count(count(node_cpu_seconds_total{instance=\"$node\",job=\"$job\"}) by (cpu))",
@@ -163,7 +120,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [
             {
               "id": 0,
@@ -175,7 +131,6 @@
           ],
           "max": 100,
           "min": 0,
-          "nullValueMode": "null",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -215,9 +170,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "text": {}
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "expr": "avg(node_load5{instance=\"$node\",job=\"$job\"}) /  count(count(node_cpu_seconds_total{instance=\"$node\",job=\"$job\"}) by (cpu)) * 100",
@@ -240,7 +196,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [
             {
               "id": 0,
@@ -252,7 +207,6 @@
           ],
           "max": 100,
           "min": 0,
-          "nullValueMode": "null",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -292,9 +246,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "text": {}
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "expr": "avg(node_load15{instance=\"$node\",job=\"$job\"}) /  count(count(node_cpu_seconds_total{instance=\"$node\",job=\"$job\"}) by (cpu)) * 100",
@@ -316,12 +271,10 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "decimals": 0,
           "mappings": [],
           "max": 100,
           "min": 0,
-          "nullValueMode": "null",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -362,9 +315,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "text": {}
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "expr": "((node_memory_MemTotal_bytes{instance=\"$node\",job=\"$job\"} - node_memory_MemFree_bytes{instance=\"$node\",job=\"$job\"}) / (node_memory_MemTotal_bytes{instance=\"$node\",job=\"$job\"} )) * 100",
@@ -395,7 +349,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [
             {
               "id": 0,
@@ -407,7 +360,6 @@
           ],
           "max": 100,
           "min": 0,
-          "nullValueMode": "null",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -447,9 +399,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "text": {}
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "expr": "((node_memory_SwapTotal_bytes{instance=\"$node\",job=\"$job\"} - node_memory_SwapFree_bytes{instance=\"$node\",job=\"$job\"}) / (node_memory_SwapTotal_bytes{instance=\"$node\",job=\"$job\"} )) * 100",
@@ -470,7 +423,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "mappings": [
             {
               "id": 0,
@@ -482,7 +434,6 @@
           ],
           "max": 100,
           "min": 0,
-          "nullValueMode": "null",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -522,9 +473,10 @@
           "values": false
         },
         "showThresholdLabels": false,
-        "showThresholdMarkers": true
+        "showThresholdMarkers": true,
+        "text": {}
       },
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "expr": "100 - ((node_filesystem_avail_bytes{instance=\"$node\",job=\"$job\",mountpoint=\"/\",fstype!=\"rootfs\"} * 100) / node_filesystem_size_bytes{instance=\"$node\",job=\"$job\",mountpoint=\"/\",fstype!=\"rootfs\"})",
@@ -549,9 +501,7 @@
       "datasource": "${DS_PROMETHEUS}",
       "description": "Total number of CPU cores",
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "format": "short",
@@ -640,9 +590,7 @@
       "decimals": 1,
       "description": "System uptime",
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "format": "s",
@@ -732,9 +680,7 @@
       "decimals": 0,
       "description": "Total RootFS",
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "format": "bytes",
@@ -823,9 +769,7 @@
       "decimals": 0,
       "description": "Total RAM",
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "format": "bytes",
@@ -912,9 +856,7 @@
       "decimals": 0,
       "description": "Total SWAP",
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "format": "bytes",
@@ -1028,7 +970,6 @@
       "description": "Basic CPU info",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1066,7 +1007,7 @@
         "alertThreshold": true
       },
       "percentage": true,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1218,7 +1159,6 @@
       "description": "Basic memory usage",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1254,7 +1194,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1401,7 +1341,6 @@
       "description": "Basic network info per interface",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1439,7 +1378,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1521,7 +1460,6 @@
       "description": "Disk space used of all filesystems mounted",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "links": []
         },
         "overrides": []
@@ -1559,7 +1497,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.7",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -13650,8 +13588,8 @@
       "type": "row"
     }
   ],
-  "refresh": "1m",
-  "schemaVersion": 26,
+  "refresh": "10s",
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [
     "linux"
@@ -13664,6 +13602,7 @@
           "text": "default",
           "value": "default"
         },
+        "description": null,
         "error": null,
         "hide": 0,
         "includeAll": false,
@@ -13679,9 +13618,14 @@
       },
       {
         "allValue": null,
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "nodeexporter",
+          "value": "nodeexporter"
+        },
         "datasource": "${DS_PROMETHEUS}",
         "definition": "",
+        "description": null,
         "error": null,
         "hide": 0,
         "includeAll": false,
@@ -13689,7 +13633,10 @@
         "multi": false,
         "name": "job",
         "options": [],
-        "query": "label_values(node_uname_info, job)",
+        "query": {
+          "query": "label_values(node_uname_info, job)",
+          "refId": "Prometheus-job-Variable-Query"
+        },
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -13702,9 +13649,14 @@
       },
       {
         "allValue": null,
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "nodeexporter:9100",
+          "value": "nodeexporter:9100"
+        },
         "datasource": "${DS_PROMETHEUS}",
         "definition": "label_values(node_uname_info{job=\"$job\"}, instance)",
+        "description": null,
         "error": null,
         "hide": 0,
         "includeAll": false,
@@ -13712,7 +13664,10 @@
         "multi": false,
         "name": "node",
         "options": [],
-        "query": "label_values(node_uname_info{job=\"$job\"}, instance)",
+        "query": {
+          "query": "label_values(node_uname_info{job=\"$job\"}, instance)",
+          "refId": "Prometheus-node-Variable-Query"
+        },
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -13730,6 +13685,7 @@
           "text": "[a-z]+|nvme[0-9]+n[0-9]+",
           "value": "[a-z]+|nvme[0-9]+n[0-9]+"
         },
+        "description": null,
         "error": null,
         "hide": 2,
         "includeAll": false,
@@ -13750,7 +13706,7 @@
     ]
   },
   "time": {
-    "from": "now-24h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
