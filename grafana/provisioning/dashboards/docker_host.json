@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": 2,
+  "id": 9,
   "links": [],
   "panels": [
     {
@@ -33,9 +33,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "format": "s",
@@ -125,9 +123,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "format": "percent",
@@ -218,9 +214,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "format": "none",
@@ -305,7 +299,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "decimals": 2,
           "mappings": [
             {
@@ -316,7 +309,6 @@
               "value": "null"
             }
           ],
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -360,7 +352,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "expr": "node_memory_MemAvailable_bytes",
@@ -383,7 +375,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "decimals": 2,
           "mappings": [
             {
@@ -394,7 +385,6 @@
               "value": "null"
             }
           ],
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -438,7 +428,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "expr": "node_memory_SwapFree_bytes",
@@ -460,7 +450,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "custom": {},
           "decimals": 2,
           "mappings": [
             {
@@ -471,7 +460,6 @@
               "value": "null"
             }
           ],
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -515,7 +503,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "targets": [
         {
           "expr": "sum(node_filesystem_free_bytes{fstype=\"ext4\"})",
@@ -540,9 +528,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "fill": 1,
@@ -574,7 +560,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -648,9 +634,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "fill": 1,
@@ -682,7 +666,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -766,9 +750,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "fill": 1,
@@ -800,7 +782,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -876,9 +858,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "fill": 4,
@@ -912,7 +892,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -982,9 +962,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "fill": 4,
@@ -1018,7 +996,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1125,9 +1103,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "fill": 1,
@@ -1161,7 +1137,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1261,9 +1237,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "fill": 4,
@@ -1297,7 +1271,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1375,9 +1349,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "fill": 4,
@@ -1411,7 +1383,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1498,9 +1470,7 @@
       "editable": true,
       "error": false,
       "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
+        "defaults": {},
         "overrides": []
       },
       "fill": 1,
@@ -1533,7 +1503,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.4.0-beta1",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1643,5 +1613,5 @@
   "timezone": "browser",
   "title": "Docker Host",
   "uid": "1bP2RbYMk",
-  "version": 4
+  "version": 1
 }
