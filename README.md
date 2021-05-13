@@ -1,6 +1,6 @@
 ### :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: Currently cadvisor:v0.39.0 NOT WORKING with the following docker-compose service on macOS BigSur: https://github.com/google/cadvisor/issues/2838
 
-Система мониторинга Docker-хостов и контейнеров стеком из [Prometheus](https://prometheus.io/) (2.27.0), [Grafana](http://grafana.org/) (7.5.3), [cAdvisor](https://github.com/google/cadvisor) (~~0.39.0~~ 0.38.8, сборщик метрик из Docker), [NodeExporter](https://github.com/prometheus/node_exporter) (1.1.2), [Pushgateway](https://github.com/prometheus/pushgateway) (1.4.0) и алертингом с [AlertManager](https://github.com/prometheus/alertmanager) (0.21.0).
+Система мониторинга Docker-хостов и контейнеров стеком из [Prometheus](https://prometheus.io/) (2.27.0), [Grafana](http://grafana.org/) (7.5.6), [cAdvisor](https://github.com/google/cadvisor) (~~0.39.0~~ 0.38.8, сборщик метрик из Docker), [NodeExporter](https://github.com/prometheus/node_exporter) (1.1.2), [Pushgateway](https://github.com/prometheus/pushgateway) (1.4.0) и алертингом с [AlertManager](https://github.com/prometheus/alertmanager) (0.21.0).
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/philyuchkoff/dockermon?style=for-the-badge)
 ![GitHub All Releases](https://img.shields.io/github/downloads/philyuchkoff/dockermon/total?style=for-the-badge)
