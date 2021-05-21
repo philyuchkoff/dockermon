@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3.5'
 
 networks:
   monitor-net:
@@ -7,6 +7,8 @@ networks:
 volumes:
     prometheus_data: {}
     grafana_data: {}
+    vmagentdata: {}
+    vmdata: {}
 
 services:
 
@@ -132,3 +134,65 @@ services:
       - monitor-net
     labels:
       org.label-schema.group: "monitoring"
+
+  vmagent:
+    container_name: vmagent
+    image: victoriametrics/vmagent
+    depends_on:
+      - "victoriametrics"
+    ports:
+      - 8429:8429
+    volumes:
+      - vmagentdata:/vmagentdata
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--promscrape.config=/etc/prometheus/prometheus.yml'
+      - '--remoteWrite.url=http://victoriametrics:8428/api/v1/write'
+    networks:
+      - monitor-net
+    restart: always
+
+  victoriametrics:
+    container_name: victoriametrics
+    image: victoriametrics/victoria-metrics
+    ports:
+      - 8428:8428
+      - 8089:8089
+      - 8089:8089/udp
+      - 2003:2003
+      - 2003:2003/udp
+      - 4242:4242
+    volumes:
+      - vmdata:/storage
+    command:
+      - '--storageDataPath=/storage'
+      - '--graphiteListenAddr=:2003'
+      - '--opentsdbListenAddr=:4242'
+      - '--httpListenAddr=:8428'
+      - '--influxListenAddr=:8089'
+    networks:
+      - monitor-net
+    restart: always
+
+  vmalert:
+    container_name: vmalert
+    image: victoriametrics/vmalert
+    depends_on:
+      - "victoriametrics"
+      - "alertmanager"
+    ports:
+      - 8880:8880
+    volumes:
+      - ./victoriametrics/alerts.yml:/etc/alerts/alerts.yml
+    command:
+      - '--datasource.url=http://victoriametrics:8428/'
+      - '--remoteRead.url=http://victoriametrics:8428/'
+      - '--remoteWrite.url=http://victoriametrics:8428/'
+      - '--notifier.url=http://alertmanager:9093/'
+      - '--rule=/etc/alerts/*.yml'
+      # display source of alerts in grafana
+      - '-external.url=http://127.0.0.1:3000' #grafana outside container
+      - '--external.alert.source=explore?orgId=1&left=["now-1h","now","VictoriaMetrics",{"expr":"{{$$expr|quotesEscape|crlfEscape|queryEscape}}"},{"mode":"Metrics"},{"ui":[true,true,true,"none"]}]' ## when copypaste the line be aware of '$$' for escaping in '$expr'    networks:
+    networks:
+      - monitor-net
+    restart: always

@@ -1,5 +1,3 @@
-NEW
-
 {
   "annotations": {
     "list": [
@@ -18,7 +16,7 @@ NEW
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": 8,
+  "id": 6,
   "links": [],
   "panels": [
     {
@@ -30,7 +28,7 @@ NEW
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "Prometheus",
+      "datasource": null,
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -122,7 +120,7 @@ NEW
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "Prometheus",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -212,7 +210,7 @@ NEW
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "Prometheus",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -296,7 +294,7 @@ NEW
     },
     {
       "cacheTimeout": null,
-      "datasource": "Prometheus",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -355,7 +353,7 @@ NEW
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "targets": [
         {
           "expr": "sum(container_memory_usage_bytes)",
@@ -379,7 +377,7 @@ NEW
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "Prometheus",
+      "datasource": null,
       "decimals": null,
       "editable": true,
       "error": false,
@@ -464,7 +462,7 @@ NEW
     },
     {
       "cacheTimeout": null,
-      "datasource": "Prometheus",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -523,7 +521,7 @@ NEW
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "targets": [
         {
           "expr": "sum(container_fs_usage_bytes)",
@@ -538,7 +536,7 @@ NEW
       "type": "stat"
     },
     {
-      "datasource": "Prometheus",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -584,7 +582,7 @@ NEW
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "targets": [
         {
           "expr": "scalar(count(container_memory_usage_bytes) > 0)",
@@ -605,7 +603,7 @@ NEW
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": null,
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -642,7 +640,7 @@ NEW
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -687,6 +685,7 @@ NEW
       },
       "yaxes": [
         {
+          "$$hashKey": "object:405",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -695,6 +694,7 @@ NEW
           "show": true
         },
         {
+          "$$hashKey": "object:406",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -713,7 +713,7 @@ NEW
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -751,7 +751,7 @@ NEW
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -822,6 +822,7 @@ NEW
       },
       "yaxes": [
         {
+          "$$hashKey": "object:520",
           "format": "bytes",
           "label": null,
           "logBase": 1,
@@ -830,6 +831,7 @@ NEW
           "show": true
         },
         {
+          "$$hashKey": "object:521",
           "format": "ms",
           "label": null,
           "logBase": 1,
@@ -848,7 +850,7 @@ NEW
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": null,
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -887,7 +889,7 @@ NEW
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -927,6 +929,7 @@ NEW
       },
       "yaxes": [
         {
+          "$$hashKey": "object:598",
           "format": "percent",
           "label": null,
           "logBase": 1,
@@ -935,6 +938,7 @@ NEW
           "show": true
         },
         {
+          "$$hashKey": "object:599",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -953,7 +957,7 @@ NEW
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": null,
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -992,7 +996,7 @@ NEW
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1032,6 +1036,7 @@ NEW
       },
       "yaxes": [
         {
+          "$$hashKey": "object:672",
           "format": "bytes",
           "label": null,
           "logBase": 1,
@@ -1040,6 +1045,7 @@ NEW
           "show": true
         },
         {
+          "$$hashKey": "object:673",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1058,7 +1064,7 @@ NEW
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": null,
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -1097,7 +1103,7 @@ NEW
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1137,6 +1143,7 @@ NEW
       },
       "yaxes": [
         {
+          "$$hashKey": "object:750",
           "format": "bytes",
           "label": null,
           "logBase": 1,
@@ -1145,6 +1152,7 @@ NEW
           "show": true
         },
         {
+          "$$hashKey": "object:751",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1163,7 +1171,7 @@ NEW
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": null,
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -1202,7 +1210,7 @@ NEW
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1242,6 +1250,7 @@ NEW
       },
       "yaxes": [
         {
+          "$$hashKey": "object:824",
           "format": "bytes",
           "label": null,
           "logBase": 1,
@@ -1250,6 +1259,7 @@ NEW
           "show": true
         },
         {
+          "$$hashKey": "object:825",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1268,7 +1278,7 @@ NEW
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": null,
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -1307,7 +1317,7 @@ NEW
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.3",
+      "pluginVersion": "7.5.7",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1347,6 +1357,7 @@ NEW
       },
       "yaxes": [
         {
+          "$$hashKey": "object:898",
           "format": "bytes",
           "label": null,
           "logBase": 1,
@@ -1355,6 +1366,7 @@ NEW
           "show": true
         },
         {
+          "$$hashKey": "object:899",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1410,5 +1422,5 @@ NEW
   "timezone": "browser",
   "title": "Docker Containers",
   "uid": "4xE2gxYMz",
-  "version": 2
+  "version": 6
 }

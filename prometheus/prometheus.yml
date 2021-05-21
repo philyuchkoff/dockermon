@@ -33,6 +33,14 @@ scrape_configs:
     honor_labels: true
     static_configs:
       - targets: ['pushgateway:9091']
+        
+  - job_name: 'vmagent'
+    static_configs:
+      - targets: ['vmagent:8429']
+        
+  - job_name: 'victoriametrics'
+    static_configs:
+      - targets: ['victoriametrics:8428']
 
 
 alerting:
@@ -46,8 +54,11 @@ alerting:
 #    scrape_interval: 10s
 #    static_configs:
 #      - targets: ['nginxexporter:9113']
-
-#  - job_name: 'aspnetcore'
-#    scrape_interval: 10s
-#    static_configs:
-#      - targets: ['eventlog-proxy:5000', 'eventlog:5000']
+  
+### REMOTE WRITE TO VICTORIAMETRICS
+remote_write:
+  - url: http://localhost:8428/api/v1/write
+    queue_config:
+      capacity: 50000
+      max_samples_per_send: 10000
+      max_shards: 100

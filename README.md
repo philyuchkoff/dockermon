@@ -36,6 +36,9 @@
 - NodeExporter (сборщик метрик хостов);
 - cAdvisor (сборщик метрик контейнеров).
 - Caddy (reverse proxy and basic auth provider for prometheus and alertmanager)
+- VictoriaMetrics `http://localhost:8428/`
+- vmagent `http://localhost:8429/`
+- vmalert `http://localhost:8880/`
 
 
 
@@ -72,12 +75,19 @@ GF_USERS_ALLOW_SIGN_UP=false
 
 :exclamation: Gafana поддерживает аутентификацию, а Prometheus и AlertManager нет, то есть, доступ к Prometheus и AlertManager открыт для всех. Если это не то, что нужно - удалите expose портов Prometheus и AlertManager из `docker-compose.yml` и используйте реверс-прокси (Nginx или Caddy, например).
 
-В Grafana предварительно уже настроены дашборды и в качестве default data source указан Prometheus. Из меню Grafana выберите `Data Sources` - `Add Data Source` и укажите контейнеры Prometheus как источник данных:
+В Grafana предварительно уже настроены дашборды и в качестве default data source указан Prometheus. В меню Grafana выберите `Data Sources` - `Add Data Source` и укажите  Prometheus как источник данных:
 
 - Name: Prometheus
 - Type: Prometheus
 - Url: `http://prometheus:9090`
 - Access: Server (default)
+
+Чтобы добавить data source VictoriaMetrics: в меню Grafana выберите `Data Sources` - `Add Data Source` и укажите  Prometheus как источник данных:
+
+- Name: VictoriaMetrics
+- Type: Prometheus
+- Url: `http://localhost:8428`
+- Access: Browser
 
 ### Docker Host Dashboard
 
@@ -98,6 +108,9 @@ GF_USERS_ALLOW_SIGN_UP=false
 
 ### Node Exporter Dashboard
 ![Node Exporter Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/nodexporter.jpg)
+
+### VictoriaMetrics Dashboard
+sdgasdasdadsasdasdadsbasdba
 
 ## Alerts
 В файле [alert.rules](https://github.com/philyuchkoff/dockermon/blob/main/prometheus/alert.rules) определены алармы для групп:
@@ -130,6 +143,7 @@ Alertmanager может работать в кластерной конфигу�
 
 ## Планы
 - :+1: Заменить Prometheus на [VictoriaMetrics](https://victoriametrics.com/)
+-- как экспортировать все DataSource?
 - :+1: добавить интересный дашбоард для Prometheus Alertmanager: [Karma](https://github.com/prymitive/karma)
 - нотификации от AlertManager в Telegram
 - добавить [бэкапилку Prometheus TSDB](https://github.com/philyuchkoff/prometheus-tsdb-dump) (она же импортер метрик из Prometheus в VictoriaMetrics)
