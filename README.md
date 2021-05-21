@@ -1,3 +1,4 @@
+:x: :x: :x: NOT WORKING :x: :x: :x:
 ### :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: Currently cadvisor:v0.39.0 NOT WORKING with the following docker-compose service on macOS BigSur: https://github.com/google/cadvisor/issues/2838
 
 Система мониторинга Docker-хостов и контейнеров стеком из [Prometheus](https://prometheus.io/) (2.27.1), [Grafana](http://grafana.org/) (7.5.7), [cAdvisor](https://github.com/google/cadvisor) (~~0.39.0~~ 0.38.8, сборщик метрик из Docker), [NodeExporter](https://github.com/prometheus/node_exporter) (1.1.2), [Pushgateway](https://github.com/prometheus/pushgateway) (1.4.0) и алертингом с [AlertManager](https://github.com/prometheus/alertmanager) (0.21.0).
