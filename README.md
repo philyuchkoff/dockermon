@@ -15,6 +15,8 @@
 За основу взята идея Stefan Prodan [dockprom](https://github.com/philyuchkoff/dockprom).
 Это же решение с Docker Swarm: [stefanprodan/swarmprom](https://github.com/stefanprodan/swarmprom)
 
+#### Почитать:
+
 :exclamation: [Collect Docker metrics with Prometheus](https://docs.docker.com/config/daemon/prometheus/)
 
 :exclamation: [Monitoring Docker container metrics using cAdvisor](https://prometheus.io/docs/guides/cadvisor/)
