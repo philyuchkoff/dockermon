@@ -17,9 +17,8 @@
 
 #### Почитать:
 
-:exclamation: [Collect Docker metrics with Prometheus](https://docs.docker.com/config/daemon/prometheus/)
-
-:exclamation: [Monitoring Docker container metrics using cAdvisor](https://prometheus.io/docs/guides/cadvisor/)
+- [Collect Docker metrics with Prometheus](https://docs.docker.com/config/daemon/prometheus/)
+- [Monitoring Docker container metrics using cAdvisor](https://prometheus.io/docs/guides/cadvisor/)
 
 
 ### Общая схема
