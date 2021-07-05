@@ -1,6 +1,6 @@
 ### :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: Currently cadvisor:v0.39.0 NOT WORKING with the following docker-compose service on macOS BigSur: https://github.com/google/cadvisor/issues/2838
 
-Система мониторинга Docker-хостов и контейнеров стеком из:
+## Система мониторинга Docker-хостов и контейнеров стеком из:
 - [Prometheus](https://prometheus.io/) 2.28.1, 
 - [Grafana](http://grafana.org/) 8.0.4, 
 - [cAdvisor](https://github.com/google/cadvisor) (~~0.39.0~~ 0.38.8, сборщик метрик из Docker), 
@@ -13,8 +13,10 @@
 ![GitHub All Releases](https://img.shields.io/github/downloads/philyuchkoff/dockermon/total?style=for-the-badge)
 
 За основу взята идея Stefan Prodan [dockprom](https://github.com/philyuchkoff/dockprom).
+Это же решение с Docker Swarm: [stefanprodan/swarmprom](https://github.com/stefanprodan/swarmprom)
 
-:exclamation: Это же решение с Docker Swarm: [stefanprodan/swarmprom](https://github.com/stefanprodan/swarmprom)
+:exclamation: [Collect Docker metrics with Prometheus](https://docs.docker.com/config/daemon/prometheus/)
+:exclamation: [Monitoring Docker container metrics using cAdvisor](https://prometheus.io/docs/guides/cadvisor/)
 
 
 ### Общая схема
