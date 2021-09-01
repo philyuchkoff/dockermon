@@ -145,5 +145,6 @@ Alertmanager может работать в кластерной конфигу�
 - нотификации от AlertManager в Telegram
 - добавить [бэкапилку Prometheus TSDB](https://github.com/philyuchkoff/prometheus-tsdb-dump) (она же импортер метрик из Prometheus в VictoriaMetrics)
 - добавить механизм бэкапа/восстановление Grafana, пока [скриптами](https://github.com/philyuchkoff/grafana-backup)
+- добавить Missing Container Metrics https://github.com/philyuchkoff/missing-container-metrics
 - ...
 
