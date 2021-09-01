@@ -3,7 +3,7 @@
 ## Система мониторинга Docker-хостов и контейнеров стеком из:
 - [Prometheus](https://prometheus.io/) 2.29.1, 
 - [Grafana](http://grafana.org/) 8.1.2, 
-- [cAdvisor](https://github.com/google/cadvisor) (~~0.39.0~~ 0.38.8, сборщик метрик из Docker), 
+- [cAdvisor](https://github.com/google/cadvisor) 0.40.0, 
 - [NodeExporter](https://github.com/prometheus/node_exporter) 1.2.2, 
 - [Pushgateway](https://github.com/prometheus/pushgateway) 1.4.1, 
 - [Caddy](https://caddyserver.com/) 2.4.3, 
