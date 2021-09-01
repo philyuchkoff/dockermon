@@ -12,7 +12,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/philyuchkoff/dockermon?style=for-the-badge)
 ![GitHub All Releases](https://img.shields.io/github/downloads/philyuchkoff/dockermon/total?style=for-the-badge)
 
-За основу взята идея Stefan Prodan [dockprom](https://github.com/philyuchkoff/dockprom).
+За основу взята идея Stefan Prodan [dockprom](https://github.com/stefanprodan/dockprom).
 Это же решение с Docker Swarm: [stefanprodan/swarmprom](https://github.com/stefanprodan/swarmprom)
 
 #### Почитать:
