@@ -130,7 +130,7 @@ AlertManager отвечает за обработку алармов, котор
 
 ## Масштабирование
 
-- Если нужно подключить еще какие-то хосты, необходимо установить и запустить ***node-exporter*** и контейнер ***cAdvisor*** на каждом новом хосте, указать эти хосты в конфиге Prometheus и заставить Prometheus перечитать конфиг, выполнив HTTP POST запрос в Prometheus:
+- Если нужно подключить еще какие-то хосты, необходимо установить и запустить ***node-exporter*** и контейнер ***cAdvisor*** на каждом новом хосте, указать эти хосты в конфиге Prometheus и заставить Prometheus перечитать [конфиг](https://prometheus.io/docs/prometheus/latest/configuration/configuration/), выполнив HTTP POST запрос в Prometheus:
 
     curl -X POST http://LOGIN:PASSWORD@<host-ip>:9090/-/reload
     
