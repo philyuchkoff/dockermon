@@ -11,7 +11,7 @@ volumes:
 services:
 
   prometheus:
-    image: prom/prometheus:v2.30.1
+    image: prom/prometheus:v2.32.1
     container_name: prometheus
     volumes:
       - ./prometheus:/etc/prometheus
@@ -48,7 +48,7 @@ services:
       org.label-schema.group: "monitoring"
 
   nodeexporter:
-    image: prom/node-exporter:v1.2.2
+    image: prom/node-exporter:v1.3.1
     container_name: nodeexporter
     volumes:
       - /proc:/host/proc:ro
@@ -85,7 +85,7 @@ services:
       org.label-schema.group: "monitoring"
 
   grafana:
-    image: grafana/grafana:8.2.1
+    image: grafana/grafana:8.3.3
     container_name: grafana
     volumes:
       - grafana_data:/var/lib/grafana
@@ -114,7 +114,7 @@ services:
       org.label-schema.group: "monitoring"
 
   caddy:
-    image: caddy:2.4.3
+    image: caddy:2.4.6
     container_name: caddy
     ports:
       - "3000:3000"
