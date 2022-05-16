@@ -1,13 +1,13 @@
 ### :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: Currently cadvisor:v0.39.0 NOT WORKING with the following docker-compose service on macOS BigSur: https://github.com/google/cadvisor/issues/2838
 
 ## Система мониторинга Docker-хостов и контейнеров стеком из:
-- [Prometheus](https://prometheus.io/) 2.34.0, 
-- [Grafana](http://grafana.org/) 8.4.4, 
+- [Prometheus](https://prometheus.io/) 2.35.0, 
+- [Grafana](http://grafana.org/) 8.5.2, 
 - [cAdvisor](https://github.com/google/cadvisor) 0.38.8, 
 - [NodeExporter](https://github.com/prometheus/node_exporter) 1.3.1, 
 - [Pushgateway](https://github.com/prometheus/pushgateway) 1.4.2, 
-- [Caddy](https://caddyserver.com/) 2.4.6, 
-- [AlertManager](https://github.com/prometheus/alertmanager) 0.23.0.
+- [Caddy](https://caddyserver.com/) 2.5.1, 
+- [AlertManager](https://github.com/prometheus/alertmanager) 0.24.0.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/philyuchkoff/dockermon?style=for-the-badge)
 ![GitHub All Releases](https://img.shields.io/github/downloads/philyuchkoff/dockermon/total?style=for-the-badge)
@@ -64,7 +64,7 @@
 Или учетные данные можно добавить непосредственно в конфиг Grafana:  
 ```
 grafana:
-  image: grafana/grafana:8.4.4
+  image: grafana/grafana:8.5.2
   env_file:
     - config
 ```
