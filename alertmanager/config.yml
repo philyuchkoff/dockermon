@@ -1,6 +1,10 @@
+global:
+  resolve_timeout: 5m
+
 route:
     receiver: 'slack'
-
+    repeat_interval: 2h
+    group_interval: 20m
 receivers:
     - name: 'slack'
       slack_configs:
