@@ -12,7 +12,25 @@ rule_files:
   - "alert.rules"
 
 # A scrape configuration containing exactly one endpoint to scrape.
+
 scrape_configs:
+
+# common template:
+# - job_name: 'type_of_hosts'
+#   scrape_interval: Xs
+#   scrape_timeout: Xs
+#   metrics_path: /path/to/metrics
+#   static_configs:
+#     - targets: ['IP:PORT']
+#       labels:
+#         service: 'kafka_prod-apps'
+#         servername: 'prod-apps'
+#     - targets: ['IP:PORT']
+#       labels:
+#         service: 'kafka_dev-apps'
+#         servername: 'dev-apps'
+#  
+
   - job_name: 'nodeexporter'
     scrape_interval: 5s
     static_configs:
