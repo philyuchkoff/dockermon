@@ -64,7 +64,7 @@
 Или учетные данные можно добавить непосредственно в конфиг Grafana:  
 ```
 grafana:
-  image: grafana/grafana:8.5.2
+  image: grafana/grafana:8.5.5
   env_file:
     - config
 ```
