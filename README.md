@@ -2,7 +2,7 @@
 
 ## Система мониторинга Docker-хостов и контейнеров стеком из:
 - [Prometheus](https://prometheus.io/) 2.36.1, 
-- [Grafana](http://grafana.org/) 8.5.5, 
+- [Grafana](http://grafana.org/) 8.5.6, 
 - [cAdvisor](https://github.com/google/cadvisor) 0.38.8 (:exclamation: cAdvisor > 0.38.8 not working on my Apple M1 chip based Mac: [#2838](https://github.com/google/cadvisor/issues/2838), [#2763](https://github.com/google/cadvisor/issues/2763))
 - [NodeExporter](https://github.com/prometheus/node_exporter) 1.3.1, 
 - [Pushgateway](https://github.com/prometheus/pushgateway) 1.4.3, 
@@ -64,7 +64,7 @@
 Или учетные данные можно добавить непосредственно в конфиг Grafana:  
 ```
 grafana:
-  image: grafana/grafana:8.5.5
+  image: grafana/grafana:8.5.6
   env_file:
     - config
 ```
