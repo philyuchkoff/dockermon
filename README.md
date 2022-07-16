@@ -96,7 +96,7 @@ GF_USERS_ALLOW_SIGN_UP=false
 
 В этом дашбоарде для графика `Free Storage` необходимо будет поправить тип файловой системы, заменив мою `ext4` на ту, которую используете вы. Меняется в `grafana/provisioning/dashboards/docker_host.json` в строке 521:
 ````
-"expr": "сумма (node_filesystem_free_bytes {fstype = \" ext4 \ "})",
+"expr": "sum (node_filesystem_free_bytes {fstype = \" ext4 \ "})",
 ````
 Правильное значение для своей системы можно посмотреть, сделав запрос `node_filesystem_free_bytes` в Prometheus.
 
