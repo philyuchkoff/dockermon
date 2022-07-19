@@ -6,7 +6,7 @@
 - [cAdvisor](https://github.com/google/cadvisor) 0.38.8 (:exclamation: cAdvisor not working on my Apple M1 chip based Mac: [#2838](https://github.com/google/cadvisor/issues/2838), [#2763](https://github.com/google/cadvisor/issues/2763))
 - [NodeExporter](https://github.com/prometheus/node_exporter) 1.3.1, 
 - [Pushgateway](https://github.com/prometheus/pushgateway) 1.4.3, 
-- [Caddy](https://caddyserver.com/) 2.5.1, 
+- [Caddy](https://caddyserver.com/) 2.5.2, 
 - [AlertManager](https://github.com/prometheus/alertmanager) 0.24.0.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/philyuchkoff/dockermon?style=for-the-badge)
