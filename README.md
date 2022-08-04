@@ -3,7 +3,7 @@
 ## Система мониторинга Docker-хостов и контейнеров стеком из:
 - [Prometheus](https://prometheus.io/) 2.37.0, 
 - [Grafana](http://grafana.org/) 9.0.6, 
-- [cAdvisor](https://github.com/google/cadvisor) 0.38.8 (:exclamation: cAdvisor not working on my Apple M1 chip based Mac: [#2838](https://github.com/google/cadvisor/issues/2838), [#2763](https://github.com/google/cadvisor/issues/2763))
+- [cAdvisor](https://github.com/google/cadvisor) 0.45.0 (:exclamation: cAdvisor not working on my Apple M1 chip based Mac: [#2838](https://github.com/google/cadvisor/issues/2838), [#2763](https://github.com/google/cadvisor/issues/2763))
 - [NodeExporter](https://github.com/prometheus/node_exporter) 1.3.1, 
 - [Pushgateway](https://github.com/prometheus/pushgateway) 1.4.3, 
 - [Caddy](https://caddyserver.com/) 2.5.2, 
