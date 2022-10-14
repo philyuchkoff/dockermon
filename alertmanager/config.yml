@@ -1,15 +1,24 @@
 global:
   resolve_timeout: 5m
-
+  http_config:
+    follow_redirects: true
+    telegram_api_url: https://api.telegram.org
 route:
-    receiver: 'slack'
+    receiver: telegram
+    continue: false
+    group_wait: 30s
+    group_interval: 5m  
     repeat_interval: 2h
-    group_interval: 20m
+
 receivers:
-    - name: 'slack'
-      slack_configs:
-          - send_resolved: true
-            text: "{{ .CommonAnnotations.description }}"
-            username: 'Prometheus'
-            channel: '#<channel-name>'
-            api_url: 'https://hooks.slack.com/services/<webhook-id>'
+    - name: telegram
+      telegram_configs:
+      - send_resolved: true
+        http_config:
+          follow_redirects: true
+        api_url: https://api.telegram.org
+        bot_token: TOKEN
+        chat_id: CHAT_ID
+        message: '{{ template "telegram.default.message" . }}'
+        parse_mode: HTML 
+templates: []
