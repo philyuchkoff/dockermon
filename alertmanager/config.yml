@@ -2,7 +2,7 @@ global:
   resolve_timeout: 5m
   http_config:
     follow_redirects: true
-    telegram_api_url: https://api.telegram.org
+  telegram_api_url: https://api.telegram.org
 route:
     receiver: telegram
     continue: false
