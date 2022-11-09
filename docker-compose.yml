@@ -11,7 +11,7 @@ volumes:
 services:
 
   prometheus:
-    image: prom/prometheus:v2.39.1
+    image: prom/prometheus:v2.40.0
     container_name: prometheus
     volumes:
       - ./prometheus:/etc/prometheus
@@ -68,7 +68,7 @@ services:
       org.label-schema.group: "monitoring"
 
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor:v0.45.0
+    image: gcr.io/cadvisor/cadvisor:v0.46.0
     container_name: cadvisor
     volumes:
       - /:/rootfs:ro
