@@ -17,8 +17,8 @@ receivers:
         http_config:
           follow_redirects: true
         api_url: https://api.telegram.org
-        bot_token: TOKEN
-        chat_id: CHAT_ID
+        bot_token: CHANGE_TO_YOUR_TOKEN
+        chat_id: CHANGE_TO_YOUR_CHAT_ID
         message: '{{ template "telegram.default.message" . }}'
         parse_mode: HTML 
 templates: []
