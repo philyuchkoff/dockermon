@@ -22,7 +22,7 @@
 
 
 ### Общая схема
-![Схема](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockermon.png)
+![Схема](screenshots/dockermon.png)
 
 ## Установка
 
@@ -92,20 +92,20 @@ GF_USERS_ALLOW_SIGN_UP=false
 
 ### Docker Host Dashboard
 
-![Docker Host Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockerhost.jpg)
+![Docker Host Dashboard](screenshots/dockerhost.jpg)
 
 ### Docker Containers Dashboard
 
-![Docker Containers Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/dockercontainers.jpg)
+![Docker Containers Dashboard](screenshots/dockercontainers.jpg)
 
 ### Monitor Services Dashboard
-![Monitor Services Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/monitorservices.jpg)
+![Monitor Services Dashboard](screenshots/monitorservices.jpg)
 
 ### Node Exporter Dashboard
-![Node Exporter Dashboard](https://github.com/philyuchkoff/dockermon/blob/main/screenshots/nodexporter.jpg)
+![Node Exporter Dashboard](screenshots/nodexporter.jpg)
 
 ## Alerts
-В файле [alert.rules](https://github.com/philyuchkoff/dockermon/blob/main/prometheus/alert.rules) определены алармы для групп:
+В файле [alert.rules](prometheus/alert.rules) определены алармы для групп:
 - Host (Docker Host)
 - Prometheus (сам Prometheus)
 - Containers (Docker Containers)
@@ -118,9 +118,15 @@ GF_USERS_ALLOW_SIGN_UP=false
 Работает, только если Prometheus запущен с флагом `--web.enable-lifecycle`
 
 ### Настройка
+В файле [config.yml](alertmanager/config.yml) не забудьте заменить `CHANGE_TO_YOUR_TOKEN` и `CHANGE_TO_YOUR_CHAT_ID` на свои реальные значения. Пока вы этого не сделаете - alertmanager будет рестартиться с ошибкой:
+````
+msg="Loading configuration file failed" file=/etc/alertmanager/config.yml err="yaml: unmarshal errors:\n  line 21: cannot unmarshal !!str `CHANGE_...` into int64"
+````
+
 Веб-интерфейс AlertManager доступен по адресу `http://<host-ip>:9093`
+
 AlertManager отвечает за обработку алармов, которые отправляет Prometheus, и может отправлять их в разные системы, полный список которых можно посмотреть в [документации](https://prometheus.io/docs/alerting/latest/configuration/)
-Отправку нотификаций в мессенджеры, почту и т.п. можно настроить в файле [alertmanager/config.yml](https://github.com/philyuchkoff/dockermon/blob/main/alertmanager/config.yml)
+Отправку нотификаций в мессенджеры, почту и т.п. можно настроить в файле [alertmanager/config.yml](alertmanager/config.yml)
 
 ## Масштабирование
 
