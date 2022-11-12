@@ -52,7 +52,7 @@
 
 ## Обновление Caddy до v2
 Выполните `docker run --rm caddy caddy hash-password --plaintext 'НОВЫЙ_ADMIN_PASSWORD'` чтобы сгенерировать хэш вашего нового пароля. 
-УБЕДИТЕСЬ, что вы заменили `ADMIN_PASSWORD` новым паролем в виде обычного текста, а `ADMIN_PASSWORD_HASH` - хешем в [docker-compose.yml](./docker-compose.yml) для контейнера caddy (в самом низу файла).
+УБЕДИТЕСЬ, что вы заменили `ADMIN_PASSWORD` новым паролем в виде обычного текста, а `ADMIN_PASSWORD_HASH` - хешем в [docker-compose.yml](docker-compose.yml) для контейнера caddy (в самом низу файла).
 
 ## Настройка Grafana
 
