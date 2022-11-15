@@ -118,7 +118,7 @@ GF_USERS_ALLOW_SIGN_UP=false
 Работает, только если Prometheus запущен с флагом `--web.enable-lifecycle`
 
 ### Настройка
-В файле [config.yml](alertmanager/config.yml) не забудьте заменить `CHANGE_TO_YOUR_TOKEN` и `CHANGE_TO_YOUR_CHAT_ID` на свои реальные значения. Пока вы этого не сделаете - alertmanager будет рестартиться с ошибкой:
+В файле [config.yml](alertmanager/config.yml) не забудьте заменить `CHANGE_TO_YOUR_TOKEN` и `CHANGE_TO_YOUR_CHAT_ID` на свои реальные значения (или настроить в этом файле нужный вам способ, если вам не нужен алертинг в Telegram). Пока вы этого не сделаете - alertmanager будет рестартиться с ошибкой:
 ````
 msg="Loading configuration file failed" file=/etc/alertmanager/config.yml err="yaml: unmarshal errors:\n  line 21: cannot unmarshal !!str `CHANGE_...` into int64"
 ````
