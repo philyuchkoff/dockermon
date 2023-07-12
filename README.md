@@ -1,13 +1,14 @@
 
 
 ## Система мониторинга Docker-хостов и контейнеров стеком из:
-- [Prometheus](https://prometheus.io/) 2.45.0, 
-- [Grafana](http://grafana.org/) 10.0.1, 
-- [cAdvisor](https://github.com/google/cadvisor) 0.47.1
-- [NodeExporter](https://github.com/prometheus/node_exporter) 1.6.0, 
-- [Pushgateway](https://github.com/prometheus/pushgateway) 1.6.0, 
+- [Prometheus](https://prometheus.io/) 2.45.0
+- [Grafana](http://grafana.org/) 10.0.2
+- [AlertManager](https://github.com/prometheus/alertmanager) 0.25.0
+- [NodeExporter](https://github.com/prometheus/node_exporter) 1.6.0
+- [Pushgateway](https://github.com/prometheus/pushgateway) 1.6.0
+- [cAdvisor](https://github.com/google/cadvisor) 0.47.2
 - [Caddy](https://caddyserver.com/) 2.6.4, 
-- [AlertManager](https://github.com/prometheus/alertmanager) 0.25.0.
+
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/philyuchkoff/dockermon?style=for-the-badge)
 
