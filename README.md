@@ -2,7 +2,7 @@
 
 ## Система мониторинга Docker-хостов и контейнеров стеком из:
 - [Prometheus](https://prometheus.io/) 2.46.0
-- [Grafana](http://grafana.org/) 10.0.2
+- [Grafana](http://grafana.org/) 10.0.3
 - [AlertManager](https://github.com/prometheus/alertmanager) 0.25.0
 - [NodeExporter](https://github.com/prometheus/node_exporter) 1.6.0
 - [Pushgateway](https://github.com/prometheus/pushgateway) 1.6.0
@@ -63,7 +63,7 @@
 Или учетные данные можно добавить непосредственно в конфиг Grafana:  
 ```
 grafana:
-  image: grafana/grafana:10.0.1
+  image: grafana/grafana:10.0.3
   env_file:
     - config
 ```
