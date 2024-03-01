@@ -6,7 +6,7 @@
 - [AlertManager](https://github.com/prometheus/alertmanager) 0.26.0
 - [NodeExporter](https://github.com/prometheus/node_exporter) 1.7.0
 - [Pushgateway](https://github.com/prometheus/pushgateway) 1.6.2
-- [cAdvisor](https://github.com/google/cadvisor) 0.48.0
+- [cAdvisor](https://github.com/google/cadvisor) 0.49.0
 - [Caddy](https://caddyserver.com/) 2.7.6, 
 
 
