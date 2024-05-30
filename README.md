@@ -7,7 +7,7 @@
 - [NodeExporter](https://github.com/prometheus/node_exporter) 1.8.0
 - [Pushgateway](https://github.com/prometheus/pushgateway) 1.8.0
 - [cAdvisor](https://github.com/google/cadvisor) 0.49.1
-- [Caddy](https://caddyserver.com/) 2.7.6, 
+- [Caddy](https://caddyserver.com/) 2.8.0, 
 
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/philyuchkoff/dockermon?style=for-the-badge)
