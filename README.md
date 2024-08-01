@@ -4,7 +4,7 @@
 - [Prometheus](https://prometheus.io/) 2.53.1
 - [Grafana](http://grafana.org/) 11.1.3
 - [AlertManager](https://github.com/prometheus/alertmanager) 0.27.0
-- [NodeExporter](https://github.com/prometheus/node_exporter) 1.8.0
+- [NodeExporter](https://github.com/prometheus/node_exporter) 1.8.2
 - [Pushgateway](https://github.com/prometheus/pushgateway) 1.8.0
 - [cAdvisor](https://github.com/google/cadvisor) 0.49.1
 - [Caddy](https://caddyserver.com/) 2.8.4, 
