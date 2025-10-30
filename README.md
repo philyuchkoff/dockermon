@@ -1,7 +1,7 @@
 
 
 ## Система мониторинга Docker-хостов и контейнеров стеком из:
-- [Prometheus](https://prometheus.io/) 3.7.2
+- [Prometheus](https://prometheus.io/) 3.7.3
 - [Grafana](http://grafana.org/) 12.2.0
 - [AlertManager](https://github.com/prometheus/alertmanager) 0.28.1
 - [NodeExporter](https://github.com/prometheus/node_exporter) 1.10.2
